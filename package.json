@@ -1,0 +1,15 @@
+{
+  "name": "gamers-savepoint",
+  "version": "1.0.0",
+  "description": "Gamers can save their progress in every game they play with this app.",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Uby",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
