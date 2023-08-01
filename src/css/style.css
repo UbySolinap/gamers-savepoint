@@ -39,29 +39,14 @@ ul {
   .container {
     flex-direction: column;
   }
-
-  .upload-modal {
-    flex-direction: column;
-  }
-
-  .add-game-window {
-    min-width: 60%;
-    min-height: 30%;
-  }
-
-  .upload-image {
-    margin: auto;
-  }
-
-  .add-button {
-    position: absolute;
-    bottom: 60%;
-    right: 0%;
-  }
 }
 
 @media screen and (max-width: 740px) {
   .game {
+    flex-direction: column;
+  }
+
+  .preview {
     flex-direction: column;
   }
 
@@ -70,7 +55,7 @@ ul {
   }
 
   .add-game-window {
-    min-width: 90%;
+    min-width: 85%;
     min-height: 80%;
   }
 
@@ -79,7 +64,11 @@ ul {
   }
 
   .form-select {
-    max-width: 60%;
+    width: 60%;
+  }
+
+  #inputHours {
+    width: 30%;
   }
 }
 
@@ -274,9 +263,11 @@ ul {
     -50%
   ); /* Makes the modal appear at the same position */
   width: 40%;
-  height: 80%;
+  min-height: 80%;
   background-color: var(--color-dark--1);
   border-radius: 5px;
+
+  padding-bottom: 10px;
 
   box-shadow: 0 1rem 6rem rgba(250, 255, 255, 0.25);
   z-index: 300;
@@ -298,18 +289,14 @@ ul {
   color: var(--color-light--2);
 }
 
-.upload {
-  margin: 5px 15px 0px 10px;
-}
-
-.upload-modal {
-  margin-bottom: 3px;
-}
-
 .upload-info {
   margin: 5px 15px 0px 10px;
 
   color: var(--color-light--1);
+}
+
+form {
+  margin-left: 10px;
 }
 
 .form-img {
@@ -335,7 +322,7 @@ select {
 
 .form-hour {
   float: left;
-  margin-top: 10px;
+  width: 240px;
 }
 
 .form-hours {
@@ -348,7 +335,7 @@ select {
 #inputHours {
   float: left;
   margin-left: 10px;
-  width: 13%;
+  width: 20%;
   height: 30px;
 
   background-color: var(--color-dark--2);
@@ -356,9 +343,7 @@ select {
 }
 
 .add-button {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
+  float: left;
 
   background: var(--color-light--3);
   color: var(--color-dark--1);
